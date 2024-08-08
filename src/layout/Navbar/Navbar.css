@@ -7,6 +7,7 @@
 }
 
 .navbar {
+ 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,3 +91,148 @@
         margin-bottom: 100px;
     }
 }
+
+
+/* navbar  */
+
+
+
+.header {
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 25rem;
+    position: relative;
+    margin: 34px 10px 86px 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 49px;
+}
+
+.navbar .nav-link {
+    display: flex;
+    justify-content: center;
+    color: #050505;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 1rem;
+    padding: 15px 48px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.navbar .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    z-index: 1;
+}
+
+.active {
+    background-color: #111111E5;
+    color: white !important;
+    font-weight: 300;
+    border-radius: 25px;
+}
+
+@media (min-width: 960px) {
+    .navbar {
+        height: 57px;
+    }
+    .navbar .nav-link {
+        font-size: 24px;
+    }
+}
+@media (min-width: 1600px) {
+    .header {
+        max-width: 1600px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 599px) {
+    .navbar .nav-link,
+    .navbar .nav-link {
+        display: none;
+    }
+    .navbar {
+        height: unset;
+    }
+
+    .navbar::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 35px;
+        background: rgba(5, 5, 5, 0.2);
+        position: absolute;
+        margin-top: 80px;
+    }
+
+    .navbar .logo {
+        margin-top: 15px;
+        width: 60px;
+        height: 60px;
+    }
+    .header {
+        margin: 0px;
+        margin-bottom: 100px;
+    }
+}
+
+.circular-menu {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.circular-menu img {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    top: 80%; /* Ajusta para posicionar los íconos debajo del logo */
+    left: 0%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.4s ease-out;
+    transform: scale(0);
+}
+
+.open.circle {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.circle a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-button {
+    cursor: pointer;
+}
+
+
